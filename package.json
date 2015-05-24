@@ -12,7 +12,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "John-Henry Liberty",
+  "author": "John-Henry Liberty <jhliberty@seedsjs.com> (http://seedsjs.com)",
   "license": "MIT",
   "devDependencies": {
     "ember-cli": "0.2.3",
