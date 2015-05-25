@@ -5,8 +5,4 @@ var User = DS.Model.extend({
   lastName: DS.attr('string')
 });
 
-User.reopenClass({
-  FIXTURES: []
-});
-
 export default User;

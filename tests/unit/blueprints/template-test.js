@@ -50,7 +50,7 @@ describe('Unit: scaffold template', function() {
       return blueprint.install(options).then(function() {
         var files = walkSync(projectPath('app', 'templates')).sort();
 
-        assert.deepEqual(files, ['users/', 'users/-form.hbs', 'users/edit.hbs', 'users/index.hbs', 'users/new.hbs', 'users/show.hbs']);
+        assert.deepEqual(files, ['users.hbs', 'users/', 'users/-form.hbs', 'users/edit.hbs', 'users/index.hbs', 'users/new.hbs', 'users/show.hbs']);
         assert.fileEqual(fixturePath('show-template'), projectPath('app', 'templates', 'users', 'show.hbs'));
         assert.fileEqual(fixturePath('new-template'), projectPath('app', 'templates', 'users', 'new.hbs'));
         assert.fileEqual(fixturePath('index-template'), projectPath('app', 'templates', 'users', 'index.hbs'));
