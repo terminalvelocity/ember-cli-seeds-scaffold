@@ -1,6 +1,6 @@
 # Ember-cli-seeds-scaffold
 
-[![Join the chat at https://gitter.im/terminalvelocity/seeds.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/terminalvelocity/seeds.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)[![Build Status](https://travis-ci.org/terminalvelocity/ember-cli-seeds-scaffold.svg?branch=master)](https://travis-ci.org/terminalvelocity/ember-cli-seeds-scaffold)
+[![Join the chat at https://gitter.im/terminalvelocity/seeds.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/terminalvelocity/seeds.js) [![Build Status](https://travis-ci.org/terminalvelocity/ember-cli-seeds-scaffold.svg?branch=master)](https://travis-ci.org/terminalvelocity/ember-cli-seeds-scaffold)
 
 >  Scaffolds adapters, models, routes and templates a la rails with a touch of Semantic-UI. Designed to work with [Seeds.js](https://github.com/terminalvelocity/seeds.js) and adapted from [Ember-cli-scaffold](https://github.com/marcioj/ember-cli-scaffold).
 
