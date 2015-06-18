@@ -2,3 +2,12 @@
 .editorconfig
 .ember-cli
 .travis
+
+
+.DS_Store
+.git*
+.jshint*
+.npmignore
+.travis.yml
+tests/
+tmp/
