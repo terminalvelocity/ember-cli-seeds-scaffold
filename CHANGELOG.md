@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.6 | 2015-06-18
+* removes eslint from pre-push hook
+
 ## v1.0.5 | 2015-06-18
 * fixes release script
 * table of contents update
@@ -11,3 +14,4 @@
 
 ### 0.0.0
 Init
+
