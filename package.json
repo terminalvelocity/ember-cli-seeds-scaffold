@@ -6,11 +6,29 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha --reporter spec 'tests/**/*-test.js'"
+    "test": "mocha --reporter spec 'tests/**/*-test.js'",
+    "watch": "ls -d test/* lib/* lib/**/* | grep -v 'node_modules' | grep .es6 | xargs ./node_modules/.bin/babel -d ./ -w",
+    "lint": "eslint -c .eslintrc lib/",
+    "lint-staged": "git diff --diff-filter=ACMRTUXB --cached --name-only | grep '.*\\.js$' | grep -v 'node_modules' | grep -v 'test' | xargs eslint -c .eslintrc --ext .js --ext .es6",
+    "doctoc": "doctoc README.md --title '**Seeds.js**' && if [ -f CONTRIBUTING.md ]; then doctoc CONTRIBUTING.md; fi && if [[ $(git diff --shortstat -- README.md 2> /dev/null | tail -n1) != '' || $(git diff --shortstat -- CONTRIBUTING.md 2> /dev/null | tail -n1) != '' ]]; then git add README.md CONTRIBUTING.md && git commit --no-verify -m'table of contents update'; fi",
+    "requireGitClean": "/bin/bash -c 'source ./scripts.sh && git_require_clean_work_tree'",
+    "dmn": "dmn gen -f . && if [[ $(git diff --shortstat 2> /dev/null | tail -n1) != '' ]]; then git add .npmignore && git commit --no-verify -m'update npmignore'; fi",
+    "gitPull": "git pull --rebase origin master",
+    "gitPush": "git push --follow-tags --no-verify && git push --tags --no-verify",
+    "build": "ls -d test/* lib/* lib/**/* | grep -v 'node_modules' | grep .es6 | xargs ./node_modules/.bin/babel -d ./",
+    "release": "f () { source ./scripts.sh && npm run requireGitClean && npm run gitPull && npm run dmn && npm run doctoc && npm run build-es5 && npm run lint && npm test && npm_release public $@; }; f"
   },
   "repository": "https://github.com/terminalvelocity/ember-cli-seeds-scaffold",
   "engines": {
     "node": ">= 0.10.0"
+  },
+  "config": {
+    "notes": "important to correct the path of npm so that the git hook doesn't error",
+    "ghooks": {
+      "pre-commit": "PATH=$PATH:/usr/local/bin:/usr/local/sbin && npm run lint-staged",
+      "pre-push": "PATH=$PATH:/usr/local/bin:/usr/local/sbin && npm run dmn && npm run doctoc && npm run lint && npm test",
+      "update": "PATH=$PATH:/usr/local/bin:/usr/local/sbin && npm install"
+    }
   },
   "author": "John-Henry Liberty <jhliberty@seedsjs.com> (http://seedsjs.com)",
   "license": "MIT",
@@ -19,6 +37,9 @@
     "ember-cli-release": "0.2.3",
     "mocha": "^2.0.1",
     "mocha-jshint": "^1.0.0",
+    "ghooks": "^0.3.2",
+    "dmn": "^1.0.10",
+    "doctoc": "^0.13.0",
     "walk-sync": "^0.1.3"
   },
   "keywords": [
