@@ -1,3 +1,56 @@
+Ember CLI - Seeds Scaffold
+=====
+
+[![Join the chat at https://gitter.im/terminalvelocity/seeds.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/terminalvelocity/seeds.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Stories in Ready](https://badge.waffle.io/terminalvelocity/seeds.js.png?label=ready&title=Ready)](https://waffle.io/terminalvelocity/seeds.js) ![Downloads on NPM](http://img.shields.io/npm/dm/seeds.svg?style=flat-square)
+
+Seeds is an acronym that stands for **S**ails **E**mber **E**mber-**D**ata **S**emantic-UI. It is designed for Rapid Application Prototyping.
+
+```
+                                                         .
+                                              .         ;
+                 .              .              ;%     ;;
+                   ,           ,                :;%  %;
+                    :         ;                   :;%;'     .,
+           ,.        %;     %;            ;        %;'    ,;
+             ;       ;%;  %%;        ,     %;    ;%;    ,%'
+              %;       %;%;      ,  ;       %;  ;%;   ,%;'
+               ;%;      %;        ;%;        % ;%;  ,%;'
+                `%;.     ;%;     %;'         `;%%;.%;'
+                 `:;%.    ;%%. %@;        %; ;@%;%'
+                    `:%;.  :;bd%;          %;@%;'
+                      `@%:.  :;%.         ;@@%;'
+                        `@%.  `;@%.      ;@@%;
+                          `@%%. `@%%    ;@@%;
+                            ;@%. :@%%  %@@%;
+                              %@bd%%%bd%%:;
+                                #@%%%%%:;;
+                                %@@%%%::;
+                                %@@@%(o);  . '
+                                %@@@o%;:(.,'
+                            `.. %@@@o%::;
+                               `)@@@o%::;
+                                %@@(o)::;
+                               .%@@@@%::;
+                               ;%@@@@%::;.
+                              ;%@@@@%%:;;;.
+                          ...;%@@@@@%%:;;;;,..
+                    Plant some seeds, watch em grow
+                        You reap what you sow
+```
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Seeds.js**
+
+- [Ember-cli-seeds-scaffold](#ember-cli-seeds-scaffold)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Running Tests](#running-tests)
+  - [Contributing](#contributing)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Ember-cli-seeds-scaffold
 
 [![Join the chat at https://gitter.im/terminalvelocity/seeds.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/terminalvelocity/seeds.js) [![Build Status](https://travis-ci.org/terminalvelocity/ember-cli-seeds-scaffold.svg?branch=master)](https://travis-ci.org/terminalvelocity/ember-cli-seeds-scaffold)
