@@ -1,6 +1,8 @@
 Ember CLI - Seeds Scaffold
 =====
 
+[![Join the chat at https://gitter.im/terminalvelocity/ember-cli-seeds-scaffold](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/terminalvelocity/ember-cli-seeds-scaffold?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Join the chat at https://gitter.im/terminalvelocity/seeds.js](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/terminalvelocity/seeds.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Stories in Ready](https://badge.waffle.io/terminalvelocity/seeds.js.png?label=ready&title=Ready)](https://waffle.io/terminalvelocity/seeds.js) ![Downloads on NPM](http://img.shields.io/npm/dm/ember-cli-seeds-scaffold.svg?style=flat-square)
 
