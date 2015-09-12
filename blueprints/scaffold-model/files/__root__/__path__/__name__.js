@@ -1,6 +1,8 @@
 import DS from 'ember-data';
 
-var <%= classifiedModuleName %> = DS.Model.extend({
+const <%= classifiedModuleName %> = DS.Model.extend({
+  createdAt: DS.attr('date'),
+  updatedAt: DS.attr('date'),
   <%= attrs %>
 });
 

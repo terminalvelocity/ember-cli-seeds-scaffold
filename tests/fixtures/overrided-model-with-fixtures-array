@@ -1,6 +1,8 @@
 import DS from 'ember-data';
 
-var User = DS.Model.extend({
+const User = DS.Model.extend({
+  createdAt: DS.attr('date'),
+  updatedAt: DS.attr('date'),
   firstName: DS.attr('string'),
   lastName: DS.attr('string')
 });
