@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.8 | 2015-09-13
+* Updates index to use 'as |block|' params, adds createdAt to index and show
+
 ## v1.0.7 | 2015-09-12
 * Update travis.yml
 * Updates router generator to use this.route instead of this.resource, updates index route file to show model before actions, adds createdAt/updatedAt to model by default and mokes it a const instead of var
@@ -20,5 +23,6 @@
 
 ### 0.0.0
 Init
+
 
 
