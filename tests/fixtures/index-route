@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    return this.store.find('bro');
+    return this.store.findAll('bro');
   },
   actions: {
     remove: function(model) {
