@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.9 | 2015-09-14
+* Updates index route/index-route fixture to use findAll and updates resource template to use semantic 2.0 styling
+
 ## v1.0.8 | 2015-09-13
 * Updates index to use 'as |block|' params, adds createdAt to index and show
 
@@ -23,6 +26,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
