@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.12 | 2015-09-23
+* Adds import config to adapter blueprint and fixture
+
 ## v1.0.11 | 2015-09-23
 * Update fixture-adapter test
 * Change adapter to use the config.apiURL from seeds-frontend generator
@@ -33,6 +36,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
