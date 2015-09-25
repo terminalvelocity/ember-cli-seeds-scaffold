@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.13 | 2015-09-25
+* updates test to be inline with reverted adapter
+* config not defined error, need to look into this. Probably just an issue with the templatingo
+
 ## v1.0.12 | 2015-09-23
 * Adds import config to adapter blueprint and fixture
 
@@ -36,6 +40,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
