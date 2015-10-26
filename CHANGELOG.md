@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.14 | 2015-10-26
+* revert const and let to var to maintain backwards compatibility with node v0.12 until next version
+
 ## v1.0.13 | 2015-09-25
 * updates test to be inline with reverted adapter
 * config not defined error, need to look into this. Probably just an issue with the templatingo
@@ -40,6 +43,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
