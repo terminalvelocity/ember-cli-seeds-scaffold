@@ -1,5 +1,8 @@
 # Changelog
 
+## v1.0.15 | 2015-10-26
+
+
 ## v1.0.14 | 2015-10-26
 * revert const and let to var to maintain backwards compatibility with node v0.12 until next version
 
@@ -43,6 +46,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
