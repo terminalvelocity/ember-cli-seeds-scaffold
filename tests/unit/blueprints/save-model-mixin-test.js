@@ -15,7 +15,7 @@ var fixturePath       = testHelper.fixturePath;
 var lookupPath        = testHelper.lookupPath;
 var projectRoot       = testHelper.projectRoot;
 
-describe('Unit: scaffold adapter', function() {
+describe('Unit: scaffold save model mixin', function() {
   var blueprint;
   var options;
   var entityName;
@@ -24,9 +24,6 @@ describe('Unit: scaffold adapter', function() {
     fs.mkdirsSync(projectRoot);
     var ui = new MockUI();
     var project = new MockProject();
-    MockProject.prototype.blueprintLookupPaths = function() {
-      return [lookupPath];
-    };
     project.root = projectRoot;
 
     options   = {
@@ -37,7 +34,7 @@ describe('Unit: scaffold adapter', function() {
       paths: [lookupPath],
       inRepoAddon: null
     };
-    blueprint = Blueprint.lookup('scaffold-adapter', options);
+    blueprint = Blueprint.lookup('scaffold-mixin', options);
   });
 
   afterEach(function() {
@@ -46,45 +43,29 @@ describe('Unit: scaffold adapter', function() {
 
   describe('install', function() {
 
-    it('installs the resource adapter', function() {
-      options.entity.name = 'user';
-      options.entity.options = { first_name: 'string', last_name: 'string' };
+    it('installs the save-model-mixin mixin', function() {
+      options.entity.name = 'whatever';
 
       return blueprint.install(options).then(function() {
-        var files = walkSync(projectPath('app', 'adapters')).sort();
+        var files = walkSync(projectPath('app', 'mixins', 'whatevers')).sort();
 
-        assert.deepEqual(files, ['user.js']);
-        assert.fileEqual(fixturePath('fixture-adapter'), projectPath('app', 'adapters', 'user.js'));
+        assert.deepEqual(files, ['save-model-mixin.js']);
+        assert.fileEqual(fixturePath('save-model-mixin'), projectPath('app', 'mixins', 'whatevers', 'save-model-mixin.js'));
       });
     });
 
-  });
-
-  describe('install pods', function() {
-
-    it('installs the adapter', function() {
-      options.pod = true;
-      options.entity.name = 'post';
-
-      return blueprint.install(options).then(function() {
-        var files = walkSync(projectPath('app', 'post')).sort();
-
-        assert.deepEqual(files, ['adapter.js']);
-      });
-    });
 
   });
 
   describe('uninstall', function() {
 
-    it('uninstalls the resrouce adapter', function() {
-      options.entity.name = 'user';
-      options.entity.options = { first_name: 'string', last_name: 'string' };
+    it('uninstalls the save-model-mixin mixin', function() {
+      options.entity.name = 'whatever';
 
-      fs.ensureFileSync(projectPath('app', 'adapters', 'user.js'));
+      fs.ensureFileSync(projectPath('app', 'mixins', 'whatevers', 'save-model-mixin.js'));
 
       return blueprint.uninstall(options).then(function() {
-        var files = walkSync(projectPath('app', 'adapters')).sort();
+        var files = walkSync(projectPath('app', 'mixins', 'whatevers'));
 
         assert.deepEqual(files, []);
       });

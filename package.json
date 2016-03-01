@@ -1,6 +1,6 @@
 {
-  "name": "ember-cli-seeds-scaffold",
-  "version": "1.0.15",
+  "name": "ember-cli-scaffold",
+  "version": "1.1.1",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -33,13 +33,11 @@
   "author": "John-Henry Liberty <jhliberty@seedsjs.com> (http://seedsjs.com)",
   "license": "MIT",
   "devDependencies": {
-    "dmn": "^1.0.10",
-    "doctoc": "^0.13.0",
-    "ember-cli": "0.2.3",
+    "ember-cli": "^1.13.8",
     "ember-cli-release": "0.2.3",
-    "eslint": "^0.22.1",
-    "ghooks": "^0.3.2",
     "mocha": "^2.0.1",
+    "mocha-jshint": "^1.0.0",
+    "sinon": "^1.15.4",
     "walk-sync": "^0.1.3"
   },
   "keywords": [
@@ -50,7 +48,7 @@
   },
   "dependencies": {
     "chalk": "1.0.0",
-    "ember-router-generator": "^0.1.1",
+    "ember-router-generator": "^1.1.1",
     "fs-extra": "^0.12.0",
     "inflection": "^1.5.1",
     "rsvp": "^3.0.18"

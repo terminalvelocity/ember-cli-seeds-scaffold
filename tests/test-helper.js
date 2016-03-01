@@ -37,6 +37,7 @@ function updatePackageJson(packagePath, func) {
 }
 
 module.exports.setupTestApp = function setupTestApp(name) {
+  if (fs.existsSync(projectRoot)) { fs.removeSync(projectRoot); }
   fs.mkdirsSync(projectRoot);
   process.chdir(projectRoot);
   return runCommand(path.join(root, 'node_modules', 'ember-cli', 'bin', 'ember'), 'new', name, '--skip-git', '--skip-npm').then(function() {
