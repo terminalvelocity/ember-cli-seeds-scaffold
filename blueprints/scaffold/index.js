@@ -5,6 +5,8 @@ var buildNaming          = require('../../lib/utilities/entity').buildNaming;
 var addScaffoldRoutes    = require('../../lib/utilities/scaffold-routes-generator').addScaffoldRoutes;
 var removeScaffoldRoutes = require('../../lib/utilities/scaffold-routes-generator').removeScaffoldRoutes;
 var chalk                = require('chalk');
+var entityAttrs          = require('../../lib/utilities/entity').entityAttrs;
+var sampleDataFromAttrs  = require('../../lib/utilities/entity').sampleDataFromAttrs;
 
 module.exports = {
   anonymousOptions: [
@@ -18,21 +20,37 @@ module.exports = {
   },
   afterInstall: function(options) {
     this._addScaffoldRoutes(options);
+
+    var locals = buildNaming(options.entity.name);
+    var resourcePath = locals.dasherizedModuleNamePlural;
+
+    var mirageConfig = this.insertIntoFile('app/mirage/config.js', [
+      'this.namespace = \'api\/v1\';',
+      'this.get(\'/' + resourcePath + '\');',
+      'this.get(\'/' + resourcePath + '/:id\');',
+      'this.post(\'/'+ resourcePath + '\');',
+      'this.del(\'/'+ resourcePath + '/:id\');',
+      'this.put(\'/'+ resourcePath + '/:id\');'
+    ].join('\n'), {
+      after: 'export default function() {\n'
+    });
+
     return RSVP.all([
-      this.invoke('scaffold-model', 'install', options),
-      this.invoke('scaffold-adapter', 'install', options),
+      mirageConfig,
+      this.invoke('model', 'install', options),
       this.invoke('scaffold-template', 'install', options),
       this.invoke('scaffold-route', 'install', options),
+      this.invoke('scaffold-mixin', 'install', options),
       this.invoke('scaffold-acceptance-test', 'install', options)
     ]);
   },
   afterUninstall: function(options) {
     this._removeScaffoldRoutes(options);
     return RSVP.all([
-      this.invoke('scaffold-model', 'uninstall', options),
-      this.invoke('scaffold-adapter', 'uninstall', options),
+      this.invoke('model', 'uninstall', options),
       this.invoke('scaffold-template', 'uninstall', options),
       this.invoke('scaffold-route', 'uninstall', options),
+      this.invoke('scaffold-mixin', 'uninstall', options),
       this.invoke('scaffold-acceptance-test', 'uninstall', options)
     ]);
   },
@@ -55,6 +73,13 @@ module.exports = {
   _writeRouterStatus: function(status, operationColor) {
     var color = status === 'identical' ? 'yellow' : operationColor;
     this._writeStatusToUI(chalk[color], status, 'app/router.js');
+  },
+  locals: function(options) {
+    var locals = {};
+    var attrs = entityAttrs(options.entity.options);
+    var sampleData = sampleDataFromAttrs(attrs);
+    locals.sampleData = sampleData;
+    return locals;
   }
 }
 

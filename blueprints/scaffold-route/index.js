@@ -1,5 +1,3 @@
-/*jshint node:true*/
-
 var path = require('path');
 var inflection  = require('inflection');
 var entityAttrs = require('../../lib/utilities/entity').entityAttrs;
@@ -38,12 +36,13 @@ module.exports = {
     var attrs = entityAttrs(options.entity.options);
     var locals = buildNaming(options.entity.name);
     locals.attrs = attrs;
+    locals.modulePrefix = this.project.config().modulePrefix;
     return locals;
   },
   mapFile: function(file, locals) {
     var fileMap = locals.fileMap;
 
-    if (this. pod) {
+    if (this.pod) {
       file = filesToPodFilesMapping[file] || file;
     }
     for (var i in fileMap) {
@@ -53,4 +52,3 @@ module.exports = {
     return file;
   }
 };
-

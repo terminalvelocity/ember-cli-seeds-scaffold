@@ -25,6 +25,11 @@ describe('Unit: scaffold route', function() {
     var ui = new MockUI();
     var project = new MockProject();
     project.root = projectRoot;
+    project._config = {
+      baseURL: '/',
+      locationType: 'auto',
+      modulePrefix: 'my-app'
+    };
 
     options   = {
       entity: { name: null },
@@ -49,7 +54,7 @@ describe('Unit: scaffold route', function() {
       return blueprint.install(options).then(function() {
         var files = walkSync(projectPath('app', 'routes')).sort();
 
-        assert.deepEqual(files, ['bros.js', 'bros/','bros/edit.js','bros/index.js','bros/new.js']);
+        assert.deepEqual(files, ['bros/','bros/edit.js','bros/index.js','bros/new.js']);
         assert.fileEqual(fixturePath('new-route'), projectPath('app', 'routes', 'bros', 'new.js'));
         assert.fileEqual(fixturePath('edit-route'), projectPath('app', 'routes', 'bros', 'edit.js'));
         assert.fileEqual(fixturePath('index-route'), projectPath('app', 'routes', 'bros', 'index.js'));
@@ -73,8 +78,7 @@ describe('Unit: scaffold route', function() {
           'index/',
           'index/route.js',
           'new/',
-          'new/route.js',
-          'route.js'
+          'new/route.js'
         ]);
 
         assert.fileEqual(fixturePath('new-route'), projectPath('app', 'bros', 'new', 'route.js'));

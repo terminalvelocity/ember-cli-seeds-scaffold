@@ -11,9 +11,6 @@
         <th>
           <%= attr.label %>
         </th><% }); %>
-        <th>
-          Created At
-        </th>
         <th colspan="3">
           Actions
         </th>
@@ -25,9 +22,6 @@
           <td>
             {{<%= camelizedModuleName %>.<%= attr.name %>}}
           </td><% }); %>
-          <td>
-            {{<%= camelizedModuleName %>.createdAt}}
-          </td>
           <td>
             {{link-to "Edit" "<%= dasherizedModuleNamePlural %>.edit" <%= camelizedModuleName %>}}
           </td>
@@ -42,26 +36,7 @@
     </tbody>
   </table>
 {{else}}
-<table class="ui table" id="blankslate">
-  <thead>
-    <tr><% attrs.forEach(function(attr) { %>
-      <th>
-        <%= attr.label %>
-      </th><% }); %>
-      <th>
-        Created At
-      </th>
-      <th colspan="3">
-        Actions
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        No <%= humanizedModuleNamePlural %> found
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <p id="blankslate">
+    No <%= humanizedModuleNamePlural %> found
+  </p>
 {{/if}}
