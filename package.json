@@ -40,7 +40,6 @@
     "eslint": "^0.22.1",
     "ghooks": "^1.0.3",
     "mocha": "^2.0.1",
-    "mocha-jshint": "^1.0.0",
     "sinon": "^1.15.4",
     "walk-sync": "^0.1.3"
   },

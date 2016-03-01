@@ -1,5 +1,3 @@
-/*jshint node:true*/
-
 var path = require('path');
 var inflection  = require('inflection');
 var entityAttrs = require('../../lib/utilities/entity').entityAttrs;
