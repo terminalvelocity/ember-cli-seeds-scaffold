@@ -1,6 +1,6 @@
 {
-  "name": "ember-cli-scaffold",
-  "version": "1.1.1",
+  "name": "ember-cli-seeds-scaffold",
+  "version": "2.4.0",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -20,7 +20,7 @@
   },
   "repository": "https://github.com/terminalvelocity/ember-cli-seeds-scaffold",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 4.2.0"
   },
   "config": {
     "notes": "important to correct the path of npm so that the git hook doesn't error",
@@ -33,8 +33,12 @@
   "author": "John-Henry Liberty <jhliberty@seedsjs.com> (http://seedsjs.com)",
   "license": "MIT",
   "devDependencies": {
+    "dmn": "^1.0.10",
+    "doctoc": "^1.0.0",
     "ember-cli": "^1.13.8",
     "ember-cli-release": "0.2.3",
+    "eslint": "^0.22.1",
+    "ghooks": "^1.0.3",
     "mocha": "^2.0.1",
     "mocha-jshint": "^1.0.0",
     "sinon": "^1.15.4",
