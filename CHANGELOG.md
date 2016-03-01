@@ -1,5 +1,12 @@
 # Changelog
 
+## v2.0.0 | 2016-03-01
+* debump version
+* remove jshint
+* v2
+* 2.4.0
+* Adds pod support, adds generation of ember-cli-mirage routes and resources.
+
 ## v1.0.15 | 2015-10-26
 
 
@@ -46,3 +53,4 @@
 
 ### 0.0.0
 Init
+
