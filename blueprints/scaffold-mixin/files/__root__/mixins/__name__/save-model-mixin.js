@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
-  deactivate: function() {
+  deactivate() {
     if (this.currentModel.get('isNew')) {
       this.currentModel.deleteRecord();
     } else {
@@ -9,11 +9,10 @@ export default Ember.Mixin.create({
     }
   },
   actions: {
-    save: function() {
-      var route = this;
-      this.currentModel.save().then(function() {
-        route.transitionTo('<%= dasherizedModuleNamePlural %>');
-      }, function() {
+    save() {
+      this.currentModel.save().then(() => {
+        this.transitionTo('<%= dasherizedModuleNamePlural %>');
+      }, () => {
         console.log('Failed to save the model');
       });
     }

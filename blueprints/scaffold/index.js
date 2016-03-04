@@ -31,7 +31,8 @@ module.exports = {
       `  this.get('/${resourcePath}/:id');`,
       `  this.post('/${resourcePath}');`,
       `  this.del('/${resourcePath}/:id');`,
-      `  this.put('/${resourcePath}/:id');`
+      `  this.put('/${resourcePath}/:id');
+      `
     ].join('\n'), {
       after: 'export default function() {\n'
     });

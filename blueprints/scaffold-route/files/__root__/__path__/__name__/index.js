@@ -1,11 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model: function() {
+  model() {
     return this.store.findAll('<%= dasherizedModuleName %>');
   },
   actions: {
-    remove: function(model) {
+    remove(model) {
       if(confirm('Are you sure?')) {
         model.destroyRecord();
       }
