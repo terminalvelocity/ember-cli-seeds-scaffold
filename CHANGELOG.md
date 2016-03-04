@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.2 | 2016-03-04
+* Add urlPrefix and fixes spaces on ember mirage config
+
 ## v2.0.1 | 2016-03-04
 * rename ember-cli-scaffold blueprint
 
@@ -56,5 +59,6 @@
 
 ### 0.0.0
 Init
+
 
 
