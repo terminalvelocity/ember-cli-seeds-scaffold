@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.3 | 2016-03-04
+* update to es6 functions
+
 ## v2.0.2 | 2016-03-04
 * Add urlPrefix and fixes spaces on ember mirage config
 
@@ -59,6 +62,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
