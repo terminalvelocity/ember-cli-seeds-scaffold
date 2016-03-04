@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.1 | 2016-03-04
+* rename ember-cli-scaffold blueprint
+
 ## v2.0.0 | 2016-03-01
 * debump version
 * remove jshint
@@ -53,4 +56,5 @@
 
 ### 0.0.0
 Init
+
 
