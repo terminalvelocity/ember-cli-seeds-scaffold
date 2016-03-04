@@ -39,7 +39,7 @@ describe('scaffold blueprint', function() {
       paths: [lookupPath],
       inRepoAddon: null
     };
-    blueprint = Blueprint.lookup('ember-cli-scaffold', options);
+    blueprint = Blueprint.lookup('ember-cli-seeds-scaffold', options);
     sinon.stub(blueprint, 'addAddonToProject');
   });
 

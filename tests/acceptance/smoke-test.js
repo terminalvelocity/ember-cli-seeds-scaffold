@@ -56,7 +56,7 @@ describe('Acceptance: scaffold smoke test', function() {
     // phantomjs doesn't support Function.prototype.bind :(
     insertTextInto(indexHtml, '  <head>', bindPolyfill);
 
-    return ember('generate ember-cli-scaffold')
+    return ember('generate ember-cli-seeds-scaffold')
       .then(function() {
         return ember('generate scaffold user name:string age:number');
       })
@@ -80,7 +80,7 @@ describe('Acceptance: scaffold smoke test', function() {
 
     insertTextInto(environment, '    modulePrefix: \'my-app\',', '    podModulePrefix: \'my-app/pods\',');
 
-    return ember('generate ember-cli-scaffold')
+    return ember('generate ember-cli-seeds-scaffold')
       .then(function() {
         return ember('generate scaffold user name:string age:number --pod');
       })

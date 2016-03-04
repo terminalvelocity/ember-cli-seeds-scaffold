@@ -44,9 +44,9 @@ module.exports.setupTestApp = function setupTestApp(name) {
     process.chdir(path.join('.', name));
     return runCommand('npm', 'install').then(function() {
       updatePackageJson(path.join(process.cwd(), 'package.json'), function(contents) {
-        contents.devDependencies['ember-cli-scaffold'] = '*';
+        contents.devDependencies['ember-cli-seeds-scaffold'] = '*';
       });
-      fs.symlinkSync(root, path.join('node_modules', 'ember-cli-scaffold'));
+      fs.symlinkSync(root, path.join('node_modules', 'ember-cli-seeds-scaffold'));
     });
   });
 };
