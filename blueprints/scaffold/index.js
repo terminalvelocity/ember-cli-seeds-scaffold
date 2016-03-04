@@ -25,12 +25,13 @@ module.exports = {
     var resourcePath = locals.dasherizedModuleNamePlural;
 
     var mirageConfig = this.insertIntoFile('app/mirage/config.js', [
-      'this.namespace = \'api\/v1\';',
-      'this.get(\'/' + resourcePath + '\');',
-      'this.get(\'/' + resourcePath + '/:id\');',
-      'this.post(\'/'+ resourcePath + '\');',
-      'this.del(\'/'+ resourcePath + '/:id\');',
-      'this.put(\'/'+ resourcePath + '/:id\');'
+      `  this.urlPrefix = 'http://localhost:1776';`,
+      `  this.namespace = 'api/v1';`,
+      `  this.get('/${resourcePath}');`,
+      `  this.get('/${resourcePath}/:id');`,
+      `  this.post('/${resourcePath}');`,
+      `  this.del('/${resourcePath}/:id');`,
+      `  this.put('/${resourcePath}/:id');`
     ].join('\n'), {
       after: 'export default function() {\n'
     });
