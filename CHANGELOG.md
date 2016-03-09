@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.0.4 | 2016-03-09
+* up the timeout limit
+* move createdAt and updatedAt to bottom of attrs list
+* Adds model blueprint. Always top level regardless of pod structure
+
 ## v2.0.3 | 2016-03-04
 * update to es6 functions
 
@@ -62,6 +67,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
