@@ -10,7 +10,7 @@ var projectRoot = testHelper.projectRoot;
 var root = process.cwd();
 
 describe('Acceptance: scaffold smoke test', function() {
-  this.timeout(450000);
+  this.timeout(650000);
 
   beforeEach(function() {
     return setupTestApp('my-app');
