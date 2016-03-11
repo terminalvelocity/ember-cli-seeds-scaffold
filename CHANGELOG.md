@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.5 | 2016-03-11
+* remove mixin from generators, tests, and fixtures
+
 ## v2.0.4 | 2016-03-09
 * up the timeout limit
 * move createdAt and updatedAt to bottom of attrs list
@@ -67,6 +70,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
