@@ -27,7 +27,7 @@ describe('Acceptance: scaffold smoke test', function() {
   }
 
   function insertTextInto(path, afterPattern, textToInsert) {
-    var text = fs.readFileSync(path, { encoding: 'utf8' });
+    var text = fs.readFileSync(path, {encoding: 'utf8'});
     var index = text.indexOf(afterPattern);
 
     if (index === -1) {
@@ -73,7 +73,6 @@ describe('Acceptance: scaffold smoke test', function() {
     fs.ensureFile(adapter, function(err) {
       fs.writeFileSync(adapter, testAdapter, "utf8");
     });
-
 
     // phantomjs doesn't support Function.prototype.bind :(
     insertTextInto(indexHtml, '  <head>', bindPolyfill);
