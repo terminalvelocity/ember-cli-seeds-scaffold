@@ -42,6 +42,13 @@ module.exports.setupTestApp = function setupTestApp(name) {
   process.chdir(projectRoot);
   return runCommand(path.join(root, 'node_modules', 'ember-cli', 'bin', 'ember'), 'new', name, '--skip-git', '--skip-npm').then(function() {
     process.chdir(path.join('.', name));
+
+    var saveModelMixin = fs.readFileSync(path.join(__dirname, 'acceptance', 'save-model-mixin'), 'utf8');
+    var mixin = path.join(projectRoot, 'my-app', 'app', 'mixins', 'save-model-mixin.js');
+    fs.ensureFile(mixin, function(err) {
+      fs.writeFileSync(mixin, saveModelMixin, "utf8");
+    });
+
     return runCommand('npm', 'install').then(function() {
       updatePackageJson(path.join(process.cwd(), 'package.json'), function(contents) {
         contents.devDependencies['ember-cli-seeds-scaffold'] = '*';
