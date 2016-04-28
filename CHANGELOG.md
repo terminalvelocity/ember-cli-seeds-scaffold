@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.0.7 | 2016-04-28
+* remove jshint comment
+
 ## v2.0.6 | 2016-04-27
 * test broken because of ember version mismatch
 * Modifies model generator to be inline with new version of ember
@@ -74,6 +77,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
