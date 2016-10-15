@@ -1,5 +1,9 @@
-import Model from 'ember-data/model';
-import attr from 'ember-data/attr';
+1	import DS from 'ember-data';
+2
+3	const {
+4	  Model,
+5	  attr
+6	} = DS;
 
 export default Model.extend({
   <%= attrs %>,
