@@ -8,7 +8,8 @@ var filesToPodFilesMapping = {
   '__root__/__path__/__name__/edit.hbs': '__root__/__path__/edit/__name__.hbs',
   '__root__/__path__/__name__/index.hbs': '__root__/__path__/index/__name__.hbs',
   '__root__/__path__/__name__/new.hbs': '__root__/__path__/new/__name__.hbs',
-  '__root__/__path__/__name__/show.hbs': '__root__/__path__/show/__name__.hbs'
+  '__root__/__path__/__name__/show.hbs': '__root__/__path__/show/__name__.hbs',
+  '__root__/__path__/__name__.hbs': '__root__/__path__/template.hbs'
 };
 
 module.exports = {
@@ -53,4 +54,3 @@ module.exports = {
     return file;
   }
 };
-
