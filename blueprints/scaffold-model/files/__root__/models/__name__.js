@@ -1,9 +1,9 @@
-1	import DS from 'ember-data';
-2
-3	const {
-4	  Model,
-5	  attr
-6	} = DS;
+import DS from 'ember-data';
+
+const {
+  Model,
+  attr
+} = DS;
 
 export default Model.extend({
   <%= attrs %>,
