@@ -1,12 +1,7 @@
 import DS from 'ember-data';
 
-const {
-  Model,
-  attr
-} = DS;
-
 export default Model.extend({
   <%= attrs %>,
-  createdAt: attr('date'),
-  updatedAt: attr('date')
+  createdAt: DS.attr('date'),
+  updatedAt: DS.attr('date')
 });
