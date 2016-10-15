@@ -24,7 +24,7 @@ module.exports = {
     var locals = buildNaming(options.entity.name);
     var resourcePath = locals.dasherizedModuleNamePlural;
 
-    var mirageConfig = this.insertIntoFile('app/mirage/config.js', [
+    var mirageConfig = this.insertIntoFile('mirage/config.js', [
       `  this.urlPrefix = 'http://localhost:1776';`,
       `  this.namespace = 'api/v1';`,
       `  this.get('/${resourcePath}');`,
@@ -82,4 +82,3 @@ module.exports = {
     return locals;
   }
 }
-
