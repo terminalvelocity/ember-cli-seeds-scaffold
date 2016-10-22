@@ -81,7 +81,8 @@ describe('Unit: scaffold template', function() {
           'new/',
           'new/template.hbs',
           'show/',
-          'show/template.hbs'
+          'show/template.hbs',
+          'template.hbs'
         ]);
 
         assert.fileEqual(fixturePath('show-template'), projectPath('app', 'users', 'show', 'template.hbs'));
