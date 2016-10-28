@@ -1,5 +1,15 @@
 # Changelog
 
+## v2.1.0 | 2016-10-28
+* adds template.hbs to expected output
+* Adds DS to model
+* adds mirage-model invocation
+* updates mirage location
+* Changes how model is scaffolded, just import DS and use DS.attr for now.
+* adds top level route with a container segment wrapped around outlet
+* remove line numbers.
+* Fixes bug with model generator
+
 ## v2.0.7 | 2016-04-28
 * remove jshint comment
 
@@ -77,6 +87,7 @@
 
 ### 0.0.0
 Init
+
 
 
 

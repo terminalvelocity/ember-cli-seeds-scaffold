@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-seeds-scaffold",
-  "version": "2.0.7",
+  "version": "2.1.0",
   "directories": {
     "doc": "doc",
     "test": "tests"
