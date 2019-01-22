@@ -11,7 +11,7 @@ export default Ember.Mixin.create({
   actions: {
     save() {
       this.currentModel.save().then(() => {
-        this.transitionTo(this.routeName.split('.').slice(0, -1).join('.'));
+        this.transitionTo(`${this.routeName.split('.').slice(0, -1).join('.')}.index`);
       }, () => {
         console.log('Failed to save the model');
       });
