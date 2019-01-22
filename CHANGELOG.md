@@ -1,5 +1,10 @@
 # Changelog
 
+## v2.1.1 | 2019-01-22
+* update save-model-mixin in test and comment out mirage test
+* remove mirageconfig from index scaffold
+* Adds save model mixin, removes mirage and testing stuff
+
 ## v2.1.0 | 2016-10-28
 * adds template.hbs to expected output
 * Adds DS to model
@@ -87,6 +92,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
