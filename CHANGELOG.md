@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.1.2 | 2019-01-22
+
+
 ## v2.1.1 | 2019-01-22
 * update save-model-mixin in test and comment out mirage test
 * remove mirageconfig from index scaffold
@@ -92,6 +95,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
