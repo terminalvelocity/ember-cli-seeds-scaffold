@@ -24,27 +24,27 @@ module.exports = {
     var locals = buildNaming(options.entity.name);
     var resourcePath = locals.dasherizedModuleNamePlural;
 
-    var mirageConfig = this.insertIntoFile('mirage/config.js', [
-      `  this.urlPrefix = 'http://localhost:1776';`,
-      `  this.namespace = 'api/v1';`,
-      ` `,
-      `  this.get('/${resourcePath}');`,
-      `  this.get('/${resourcePath}/:id');`,
-      `  this.post('/${resourcePath}');`,
-      `  this.del('/${resourcePath}/:id');`,
-      `  this.put('/${resourcePath}/:id');
-      `
-    ].join('\n'), {
-      after: 'export default function() {\n'
-    });
+    // var mirageConfig = this.insertIntoFile('mirage/config.js', [
+    //   `  this.urlPrefix = 'http://localhost:1776';`,
+    //   `  this.namespace = 'api/v1';`,
+    //   ` `,
+    //   `  this.get('/${resourcePath}');`,
+    //   `  this.get('/${resourcePath}/:id');`,
+    //   `  this.post('/${resourcePath}');`,
+    //   `  this.del('/${resourcePath}/:id');`,
+    //   `  this.put('/${resourcePath}/:id');
+    //   `
+    // ].join('\n'), {
+    //   after: 'export default function() {\n'
+    // });
 
     return RSVP.all([
       mirageConfig,
       this.invoke('scaffold-model', 'install', options),
       this.invoke('scaffold-template', 'install', options),
       this.invoke('scaffold-route', 'install', options),
-      this.invoke('scaffold-acceptance-test', 'install', options),
-      this.invoke('mirage-model', 'install', options)
+      // this.invoke('scaffold-acceptance-test', 'install', options),
+      // this.invoke('mirage-model', 'install', options)
     ]);
   },
   afterUninstall: function(options) {
@@ -53,8 +53,8 @@ module.exports = {
       this.invoke('scaffold-model', 'uninstall', options),
       this.invoke('scaffold-template', 'uninstall', options),
       this.invoke('scaffold-route', 'uninstall', options),
-      this.invoke('scaffold-acceptance-test', 'uninstall', options),
-      this.invoke('mirage-model', 'uninstall', options)
+      // this.invoke('scaffold-acceptance-test', 'uninstall', options),
+      // this.invoke('mirage-model', 'uninstall', options)
     ]);
   },
   _addScaffoldRoutes: function(options) {
