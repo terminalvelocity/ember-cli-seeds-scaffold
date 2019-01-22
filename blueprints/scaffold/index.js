@@ -39,7 +39,6 @@ module.exports = {
     // });
 
     return RSVP.all([
-      mirageConfig,
       this.invoke('scaffold-model', 'install', options),
       this.invoke('scaffold-template', 'install', options),
       this.invoke('scaffold-route', 'install', options),
