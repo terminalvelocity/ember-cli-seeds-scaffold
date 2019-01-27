@@ -1,5 +1,8 @@
 # Changelog
 
+## v2.1.3 | 2019-01-27
+* updates addon to use new style imports
+
 ## v2.1.2 | 2019-01-22
 
 
@@ -95,6 +98,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
