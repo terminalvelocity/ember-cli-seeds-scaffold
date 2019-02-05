@@ -65,6 +65,14 @@ You could also do `ember install ember-cli-scaffold` in your ember-cli app.
 
 ## Usage
 
+#### With Ember
+
+```sh
+ember generate scaffold user first_name:string last_name:string age:number
+open http://localhost:4200/users
+```
+#### With Seeds
+
 ```sh
 seeds generate scaffold user first_name:string last_name:string age:number
 open http://localhost:4200/users
@@ -73,7 +81,7 @@ open http://localhost:4200/users
 This command generate the following files:
 
 - app/mixins/save-model-mixin.js
-- app/adapters/user.js
+<!-- - app/adapters/user.js -->
 - app/models/user.js
 - app/routes/users.js
 - app/routes/users/edit.js
@@ -85,7 +93,7 @@ This command generate the following files:
 - app/templates/users/index.hbs
 - app/templates/users/new.hbs
 - app/templates/users/show.hbs
-- tests/acceptance/users-test.js
+<!-- - tests/acceptance/users-test.js -->
 
 ## Running Tests
 
